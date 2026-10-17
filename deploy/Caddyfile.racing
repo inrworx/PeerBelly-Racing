@@ -1,0 +1,9 @@
+	# Belly Cart (PeerBelly Racing). Add inside the games.peerbelly.com site,
+	# next to the /pong handlers and above the final 404 `handle`.
+	redir /racing /racing/ 308
+
+	handle_path /racing/* {
+		root * /var/www/games/racing
+		try_files {path} /index.html
+		file_server
+	}
