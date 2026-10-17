@@ -4,5 +4,5 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 git pull --ff-only
 mkdir -p /var/www/games/racing
-rsync -a --delete --exclude '.git' --exclude 'deploy' --exclude 'README.md' ./ /var/www/games/racing/
+rsync -a --delete --exclude '.git' --exclude '.gitignore' --exclude 'deploy' --exclude 'README.md' ./ /var/www/games/racing/
 echo "Belly Cart deployed: $(git rev-parse --short HEAD)"
